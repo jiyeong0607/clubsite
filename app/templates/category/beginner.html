@@ -1,0 +1,18 @@
+<!-- templates/beginner.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Beginner 그룹 목록</title>
+</head>
+<body>
+    <h1>Beginner 그룹 목록</h1>
+    <ul>
+        {% for group in groups %}
+        <li>
+            <a href="{{ url_for('group', group_id=group.id) }}">{{ group.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

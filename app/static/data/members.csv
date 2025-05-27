@@ -1,0 +1,40 @@
+﻿id,name,department,group_id,student number,blog_url
+1,유예원,사이버보안학과,1,2371089,https://www.notion.so/hwijugn/1b370ca2d94780b9bf91e9eef3d34ce7?v=1b370ca2d9478148a813000c85edb6ff&p=1c670ca2d94780e6a29cdcac5a2e35ea&pm=s
+2,김은빈,영어영문학과,1,2090019,https://kimeunnen.tistory.com/
+3,박고은,사이버보안학과,1,2466020,https://pokpung-ganji.tistory.com
+4,서연아,컴퓨터공학과,1,2476135,https://docs.google.com/document/d/1mEF5WvuRlFMoNaEUOKpXcFEBN1SecTxMjFEooSPGkls/edit?usp=sharing
+5,박주영,사이버보안학과,1,2467012,()
+6,공지영,사이버보안학과,2,2467004,https://blog.naver.com/kongjiyeong_
+7,서예인,컴퓨터공학과,2,2466029,https://todont-knowfrom0521.tistory.com/
+8,왕은서,소프트웨어학부,2,2371088,https://itsmeking.tistory.com
+9,정채린,사이버보안학과,3,2467026,https://blog.naver.com/kijmhan77/223804993618
+10,황영서,컴퓨터공학과,3,2371069,https://velog.io/@kagu/posts
+11,석윤서,사이버보안학과,3,2467018,https://blog.naver.com/ysseok05
+12,민채은,소프트웨어학부,3,2371080,https://velog.io/@alscodms04/posts
+13,노윤하,컴퓨터공학과,4,2566014,https://nononnn.tistory.com/5
+14,박지예,사이버보안학과,4,2467013,https://m.blog.naver.com/1001zi
+15,송유진,컴퓨터공학과,4,2376138,https://slytherin-1.tistory.com/2
+16,임정민,사이버보안학과,4,2371095,https://blog.naver.com/limjm0424
+17,김은아,소프트웨어학부,5,2371079,https://velog.io/@anb0o/posts
+18,백소정,사이버보안학과,5,2467014,https://werty2.tistory.com/
+19,오로라,사이버보안학과,5,2467022,https://velog.io/@aroro6210/posts
+20,주현아,컴퓨터공학과,5,2466055,bibimbab03 (비빔) / 작성글 - velog
+21,지연경,소프트웨어학부,6,(),()
+22,조휘정,사이버보안학과,6,(),https://blog.naver.com/ysseok05/223808413956
+23,박연수,소프트웨어학부,7,(),https://dustn926.tistory.com/category/연구/Deepfake로부터 안전한 사진 변환 서비스
+24,장다연,(),7,(),https://velog.io/@daniayo/series/ECOPS
+25,송연우,(),8,(),https://miaami.tistory.com/
+26,최다인,소프트웨어학부,8,(),https://dada42.tistory.com/
+27,곽인정,(),9,(),https://securitystudying.tistory.com/
+28,박시원,(),9,(),()
+29,이승연,(),10,(),https://blog.naver.com/seulyeon719
+30,김세정,소프트웨어학부,10,(),https://tpwjdstudy.tistory.com/
+31,장다연,(),11,(),https://velog.io/@daniayo/series/ECOPS
+32,조휘정,사이버보안학과,11,(),https://blog.naver.com/ysseok05/223808413956
+33,곽인정,(),11,(),https://dada42.tistory.com/
+34,송연우,(),12,(),https://miaami.tistory.com/
+35,지연경,소프트웨어학부,12,(),()
+36,이승연,(),12,(),https://blog.naver.com/seulyeon719
+37,박연수,소프트웨어학부,13,(),https://dustn926.tistory.com/category/연구/Deepfake로부터 안전한 사진 변환 서비스
+38,이승연,(),13,(),https://blog.naver.com/seulyeon719
+39,박시원,(),13,(),()

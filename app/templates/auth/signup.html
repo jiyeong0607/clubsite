@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+</head>
+
+<body>
+  <form onsubmit="handleSignup(event)">
+    <table>
+      <tr><td><h2>회원가입</h2></td></tr>
+      <tr><td>아이디</td></tr>
+      <tr>
+        <td>
+          <div class="id-check-container">
+            <input type="text" class="text" id="id" required />
+            <button type="button" class="check-btn" onclick="checkDuplicate()">중복확인</button>
+          </div>
+        </td>
+      </tr>
+      <tr><td>비밀번호</td></tr>
+      <tr><td><input type="password" class="text" id="pw" required /></td></tr>
+      <tr><td>비밀번호 확인</td></tr>
+      <tr><td><input type="password" class="text" id="pw-confirm" required /></td></tr>
+      <tr><td>이름</td></tr>
+      <tr><td><input type="text" class="text" id="name" required /></td></tr>
+      <tr><td>이메일</td></tr>
+      <tr>
+        <td class="email-container">
+          <input type="text" class="email" id="email-id" placeholder="이메일 앞부분" required />
+          <span class="at">@</span>
+          <input type="text" class="email" id="email-domain" placeholder="도메인 (예: example.com)" required />
+        </td>
+      </tr>
+      <tr><td><input type="submit" value="가입하기" class="btn" /></td></tr>
+    </table>
+  </form>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+
+      const userId = document.getElementById("id").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const pw = document.getElementById("pw").value;
+      const pwConfirm = document.getElementById("pw-confirm").value;
+      const emailId = document.getElementById("email-id").value.trim();
+      const emailDomain = document.getElementById("email-domain").value.trim();
+      const email = emailId + "@" + emailDomain;
+
+      if (name.length < 2) {
+        alert("이름은 두 글자 이상이어야 합니다.");
+        return;
+      }
+
+      const pwRegex = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/;
+      if (!pwRegex.test(pw)) {
+        alert("비밀번호는 6자 이상이며, 영문과 숫자를 모두 포함해야 합니다.");
+        return;
+      }
+
+      if (pw !== pwConfirm) {
+        alert("비밀번호가 일치하지 않습니다.");
+        return;
+      }
+
+      if (!emailId || !emailDomain) {
+        alert("이메일을 모두 입력해주세요.");
+        return;
+      }
+
+      const domainRegex = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!domainRegex.test(emailDomain)) {
+        alert("올바른 이메일 도메인을 입력해주세요. (예: school.edu, example.com)");
+        return;
+      }
+
+      const fullEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!fullEmailRegex.test(email)) {
+        alert("유효하지 않은 이메일 형식입니다.");
+        return;
+      }
+
+      alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
+      window.location.href = "login.html";
+    }
+
+    function checkDuplicate() {
+      const idInput = document.getElementById("id").value.trim();
+      const existingIds = ["admin", "testuser", "ecops"];
+
+      if (!idInput) {
+        alert("아이디를 입력해주세요.");
+        return;
+      }
+
+      if (existingIds.includes(idInput)) {
+        alert("이미 존재하는 아이디입니다.");
+      } else {
+        alert("사용 가능한 아이디입니다.");
+      }
+    }
+  </script>
+</body>
+</html>

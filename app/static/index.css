@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.category a {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.category a:hover {
+    color: #1e90ff;
+}

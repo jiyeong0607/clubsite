@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>E-COPS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+  <style>
+    body {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>E-COPS</h1>
+    <div class="auth-links">
+      <a href="{{ url_for('auth.logout') }}">로그아웃</a>
+    </div>
+  </header>
+  <div class="container">
+    <div class="category">
+      <a href="{{ url_for('category.beginner') }}">BEGINNER</a>
+    </div>
+    <div class="category">
+      <a href="{{ url_for('category.challenger') }}">CHALLENGER</a>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      const isLoggedIn = localStorage.getItem('loggedIn');
+      if (!isLoggedIn) {
+        alert("로그인 후 이용 가능합니다.");
+        window.location.href = "index0.html";
+      }
+
+      if (isLoggedIn) {
+        document.body.style.display = "block";
+      }
+
+
+      if (performance.getEntriesByType("navigation")[0].type === "reload") {
+        // 새로고침이더라도 loggedIn 유지, 대신 일정 시간 후 자동 로그아웃 로직 고려 가능
+      }
+
+    };
+  </script>
+</body>
+
+</html>

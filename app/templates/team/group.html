@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ group.name }} - 그룹 멤버</title>
+</head>
+
+<body>
+    <h1>{{ group.name }} - 멤버 목록</h1>
+    <ul> {% for member in members %} <li><a href="{{ url_for('member', member_id=member.id|int) }}">{{ member.name }}</a></li> {% endfor %} </ul>
+</body>
+
+</html>

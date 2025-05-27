@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ member.name }}</title>
+</head>
+
+<body>
+    <h1>{{ member.name }}</h1>
+    <p>- 학과: {{ member.department }}</p>
+    <p>- 학번: {{ member['student number'] }}</p>
+    <p>- 블로그: <a href="{{ member.blog_url }}" target="_blank">{{ member.blog_url }}</a></p>
+</body>
+
+</html>

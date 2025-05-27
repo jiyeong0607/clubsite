@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+
+      const id = document.getElementById("id").value;
+      const pw = document.getElementById("password").value;
+      const seed = document.getElementById("seed").value;
+
+      if (!id || !pw) {
+        alert("ID와 Password를 모두 입력해주세요.");
+        return;
+      }
+
+      if (seed !== "1234") {
+        alert("올바른 동아리 비밀번호를 입력해주세요.");
+        return;
+      }
+
+      // 로그인 성공 처리
+      localStorage.setItem("loggedIn", "true");
+      alert("로그인 성공!");
+      window.location.href = "index.html"; //정적페이지처럼 링크를 하면 플라스크에서 404가 뜨고, 이걸 "/dashboard"로 바꾸면 아무런 이동을 안 한다.
+    }
+  </script>
+</head>
+
+<body>
+  <form method="POST" action="{{ url_for('auth.login') }}"></form>
+  <form onsubmit="handleLogin(event)">
+    <table>
+      <tr>
+        <td>
+          <h2>로그인</h2>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" id="id" placeholder="ID" required></td>
+      </tr>
+      <tr>
+        <td><input type="password" id="password" placeholder="Password" required></td>
+      </tr>
+      <tr>
+        <td><input type="password" id="seed" placeholder="동아리 비밀번호 입력" required></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"> 로그인 정보 저장</td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Sign in" class="btn"></td>
+      </tr>
+      <tr>
+        <td><a href="{{ url_for('auth.register') }}">회원가입</a></td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

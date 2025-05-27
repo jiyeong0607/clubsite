@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>500 Internal Server Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="error-container">
+        <h1>500</h1>
+        <p>서버에 문제가 발생했습니다. 나중에 다시 시도해주세요.</p>
+        <a href="{{ url_for('main.index') }}">홈으로 돌아가기</a>
+    </div>
+</body>
+</html>

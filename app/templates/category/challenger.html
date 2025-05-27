@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Challenger Groups</title>
+</head>
+
+<body>
+    <h1>Challenger 그룹 목록</h1>
+    <ul> {% for group in groups %} <li><a href="{{ url_for('group', group_id=group.id|int) }}">{{ group.name }}</a></li>
+        {% endfor %} </ul>
+</body>
+
+</html>
